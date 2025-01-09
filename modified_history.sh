@@ -35,6 +35,14 @@ rm RWG*
 wget https://github.com/GTNewHorizons/Realistic-Terrain-Generation/releases/download/1.1.3-GTNH/RTG-1.1.3-GTNH.jar
 wget https://github.com/GTNewHorizons/Climate-Control/releases/download/0.10.0-GTNH/ClimateControl-0.10.0-GTNH.jar
 popd
+
 sed -i 's/S:"World Generator"=RWG/S:"World Generator"=RTG/' config/defaultworldgenerator.cfg
 sed -i 's/level-type=rwg/level-type=rtg/' server.properties
 sed -i 's/spawn-protection=1/spawn-protection=0/' server.properties
+
+wget https://github.com/Undercoverer/gtnh-maker/archive/refs/tags/1.zip
+unzip 1.zip
+mv gtnh-maker-1/config/ .
+rm -r gtnh-maker-1/
+rm "1.zip"
+
