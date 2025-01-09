@@ -42,7 +42,7 @@ sed -i 's/spawn-protection=1/spawn-protection=0/' server.properties
 
 wget https://github.com/Undercoverer/gtnh-maker/archive/refs/tags/1.zip
 unzip 1.zip
-mv gtnh-maker-1/config/ .
+rsync -a gtnh-maker-1/config// config//
 rm -r gtnh-maker-1/
 rm "1.zip"
 
