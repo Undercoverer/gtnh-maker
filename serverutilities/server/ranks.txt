@@ -1,0 +1,19 @@
+[player]
+power: 1
+default_player_rank: true
+serverutilities.claims.max_chunks: 1000
+serverutilities.chunkloader.max_chunks: 1000
+serverutilities.back.warmup: 5s
+serverutilities.back.cooldown: 0s
+serverutilities.back.respawn: false
+serverutilities.homes.max: 3
+serverutilities.homes.warmup: 5s
+serverutilities.homes.cooldown: 0s
+serverutilities.homes.cross_dim: true
+serverutilities.rtp.cooldown: 10m
+serverutilities.rtp.warmup: 5s
+serverutilities.spawn.cooldown: 0s
+serverutilities.spawn.warmup: 5s
+serverutilities.tpa.warmup: 5s
+serverutilities.tpa.cooldown: 0s
+serverutilities.tpa.cross_dim: true
