@@ -53,6 +53,8 @@ show_spinner() {
     local delay=0.1
     local spinstr='|/-\'
 
+    tput civis
+
     while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
         local temp=${spinstr#?}
         printf " [${CYAN}%c${NC}]  " "$spinstr"
@@ -61,6 +63,8 @@ show_spinner() {
         printf "\b\b\b\b\b\b"
     done
     printf "    \b\b\b\b"
+
+    tput cnorm
 }
 
 # Download with custom progress
