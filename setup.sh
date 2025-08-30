@@ -325,6 +325,6 @@ echo ""
 print_success "✨ GT:NH server setup completed successfully!"
 echo ""
 echo -e "${BOLD}📍 Server location:${NC} ${WHITE}${PWD}/${NC}"
-echo -e "${BOLD}🎮 To start the server, run:${NC} ${GREEN}./${BASE_DIR}/${SERVER_DIR}/startserver-java9.sh${NC}"
+echo -e "${BOLD}🎮 To start the server, run:${NC} ${GREEN}cd ${BASE_DIR}/${SERVER_DIR} && ./startserver-java9.sh${NC}"
 echo ""
 
