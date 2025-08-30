@@ -9,15 +9,37 @@ BASE_DIR="Servers"
 SERVER_DIR="GTNH"
 
 # Which version of GT:NH serverpack to use
-GTNH_VERSION="2.7.2"
+GTNH_VERSION="2.8.0-beta-2"
 JAVA_VERSION="17-21"
 
 # Look in the beta folder
-USE_BETA="false"
+USE_BETA="true"
 
 # RTG and ClimateControl versions
-RTG_VERSION="1.1.3-GTNH"
+RTG_VERSION="1.1.4-GTNH"
 CLIMATE_VERSION="0.10.0-GTNH"
+
+########################################
+# Required tools
+########################################
+
+REQUIRED_TOOLS=("wget" "unzip" "sed" "rsync")
+
+MISSING_TOOLS=()
+
+for tool in "${REQUIRED_TOOLS[@]}"; do
+    if ! command -v "$tool" &> /dev/null; then
+        MISSING_TOOLS+=("$tool")
+    fi
+done
+
+if [ "${#MISSING_TOOLS[@]}" -ne 0 ]; then
+    echo "Error: The following required tools are missing:"
+    for t in "${MISSING_TOOLS[@]}"; do
+        echo "  - $t"
+    done
+    exit 1
+fi
 
 ########################################
 # Internal variables
