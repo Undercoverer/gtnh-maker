@@ -311,6 +311,7 @@ sleep 2
 
 print_step "🛠️ Applying final fixes..."
 run_with_progress "${CYAN}" "Making server executable..." chmod +x startserver-java9.sh
+run_with_progress "${CYAN}" "Fixing shebang..." sed -i 's|^#!/bin/bash|#!/usr/bin/env bash|' startserver-java9.sh
 run_with_progress "${CYAN}" "Accepting EULA..." sed -i 's/false/true/g' eula.txt
 echo ""
 
