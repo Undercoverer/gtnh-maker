@@ -5,7 +5,7 @@ serverutilities.claims.max_chunks: 1000
 serverutilities.chunkloader.max_chunks: 1000
 serverutilities.back.warmup: 5s
 serverutilities.back.cooldown: 0s
-serverutilities.back.respawn: false
+serverutilities.back.respawn: true
 serverutilities.homes.max: 3
 serverutilities.homes.warmup: 5s
 serverutilities.homes.cooldown: 0s
