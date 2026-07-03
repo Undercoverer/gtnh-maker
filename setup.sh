@@ -14,8 +14,8 @@
 
 BASE_DIR="Servers"                    # Root directory for server installations
 SERVER_DIR="GTNH"                     # Specific server instance directory
-GTNH_VERSION="2.8.0-beta-2"           # Target GT:NH serverpack version
-JAVA_VERSION="17-21"                  # Compatible Java version range
+GTNH_VERSION="2.9.0-beta-1"           # Target GT:NH serverpack version
+JAVA_VERSION="17-25"                  # Compatible Java version range
 USE_BETA="true"                       # Enable beta release channel
 
 # World generation mod versions
