@@ -243,10 +243,10 @@ sleep 2
 
 
 # ┌─────────────────────────────────────────────────────────────────────────┐
-# │                      Server Utilities Configuration                     │
+# │                           Server Configuration                          │
 # └─────────────────────────────────────────────────────────────────────────┘
 
-print_step "⚙️ Configuring server utilities..."
+print_step "⚙️ Configuring server..."
 run_with_progress "${CYAN}" "Set explosion perms by team..." sed -i 's/S:enable_explosions=TRUE/S:enable_explosions=DEFAULT/' serverutilities/serverutilities.cfg
 run_with_progress "${CYAN}" "Only backup claimed chunks..." sed -i 's/B:only_backup_claimed_chunks=false/B:only_backup_claimed_chunks=true/' serverutilities/serverutilities.cfg
 run_with_progress "${CYAN}" "Enable /back..." sed -i 's/B:back=false/B:back=true/' serverutilities/serverutilities.cfg
@@ -256,6 +256,11 @@ run_with_progress "${CYAN}" "Enable /tpa..." sed -i 's/B:tpa=false/B:tpa=true/' 
 run_with_progress "${CYAN}" "Enable chunk claiming..." sed -i 's/B:chunk_claiming=false/B:chunk_claiming=true/' serverutilities/serverutilities.cfg
 run_with_progress "${CYAN}" "Disable player suffocation damage..." sed -i 's/B:disable_player_suffocation_damage=false/B:disable_player_suffocation_damage=true/' serverutilities/serverutilities.cfg
 run_with_progress "${CYAN}" "Enable rank control of permissions..." sed -i '/^ranks {/,/^}/ s/^\(\s*B:enabled\s*=\s*\)false/\1true/' serverutilities/serverutilities.cfg
+run_with_progress "${CYAN}" "Increase FindIt distance from 16 blocks to 64 blocks..." sed -i 's/S:SearchRadius=16/S:SearchRadius=128/' config/findit.cfg
+run_with_progress "${CYAN}" "Use the FindIt particle highlighter..." sed -i 's/S:UseParticleHighlighter=false/S:UseParticleHighlighter=true/' config/findit.cfg
+run_with_progress "${CYAN}" "Allow some amount of light on the surface at night time..." sed -i 's/S:mode=EVERYWHERE/S:mode=ONLY_INSIDE/' config/darkerer.cfg
+run_with_progress "${CYAN}" "Increase drop off radius..." sed -i 's/I:dropoffRadius=4/I:dropoffRadius=16/' config/bogosorter.cfg
+run_with_progress "${CYAN}" "Enable cool ladders..." sed -i 's/B:"Enable Freestanding Ladders"=false/B:"Enable Freestanding Ladders"=true/' config/CarpentersBlocks.cfg
 echo ""
 
 sleep 2
